@@ -1,0 +1,29 @@
+[info] Packaging C:\Users\gbour\Documents\ING2-SCIA\Scala Project\target\scala-2.12\scala-project_2.12-0.1.jar ...
+[debug] Input file mappings:
+[debug] 	example\JsonParser.class
+[debug] 	  C:\Users\gbour\Documents\ING2-SCIA\Scala Project\target\scala-2.12\classes\example\JsonParser.class
+[debug] 	example\Main$.class
+[debug] 	  C:\Users\gbour\Documents\ING2-SCIA\Scala Project\target\scala-2.12\classes\example\Main$.class
+[debug] 	example\CarData.class
+[debug] 	  C:\Users\gbour\Documents\ING2-SCIA\Scala Project\target\scala-2.12\classes\example\CarData.class
+[debug] 	example
+[debug] 	  C:\Users\gbour\Documents\ING2-SCIA\Scala Project\target\scala-2.12\classes\example
+[debug] 	example\JsonParser$$anonfun$2.class
+[debug] 	  C:\Users\gbour\Documents\ING2-SCIA\Scala Project\target\scala-2.12\classes\example\JsonParser$$anonfun$2.class
+[debug] 	example\JsonParser$$anonfun$1.class
+[debug] 	  C:\Users\gbour\Documents\ING2-SCIA\Scala Project\target\scala-2.12\classes\example\JsonParser$$anonfun$1.class
+[debug] 	example\CsvParser$.class
+[debug] 	  C:\Users\gbour\Documents\ING2-SCIA\Scala Project\target\scala-2.12\classes\example\CsvParser$.class
+[debug] 	example\HttpRequest$.class
+[debug] 	  C:\Users\gbour\Documents\ING2-SCIA\Scala Project\target\scala-2.12\classes\example\HttpRequest$.class
+[debug] 	example\Main$delayedInit$body.class
+[debug] 	  C:\Users\gbour\Documents\ING2-SCIA\Scala Project\target\scala-2.12\classes\example\Main$delayedInit$body.class
+[debug] 	example\CsvParser.class
+[debug] 	  C:\Users\gbour\Documents\ING2-SCIA\Scala Project\target\scala-2.12\classes\example\CsvParser.class
+[debug] 	example\JsonParser$.class
+[debug] 	  C:\Users\gbour\Documents\ING2-SCIA\Scala Project\target\scala-2.12\classes\example\JsonParser$.class
+[debug] 	example\HttpRequest.class
+[debug] 	  C:\Users\gbour\Documents\ING2-SCIA\Scala Project\target\scala-2.12\classes\example\HttpRequest.class
+[debug] 	example\Main.class
+[debug] 	  C:\Users\gbour\Documents\ING2-SCIA\Scala Project\target\scala-2.12\classes\example\Main.class
+[info] Done packaging.

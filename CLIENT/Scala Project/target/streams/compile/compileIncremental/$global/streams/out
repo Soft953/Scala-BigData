@@ -1,0 +1,33 @@
+[debug] 
+[debug] Initial source changes: 
+[debug] 	removed:Set(\mnt\c\Users\gbour\Documents\ING2-SCIA\Scala Project\src\main\scala\example\HttpRequest.scala)
+[debug] 	added: Set()
+[debug] 	modified: Set(C:\Users\gbour\Documents\ING2-SCIA\Scala Project\src\main\scala\example\HttpRequest.scala)
+[debug] Invalidated products: Set(C:\Users\gbour\Documents\ING2-SCIA\Scala Project\target\scala-2.12\classes\example\Main$.class, C:\Users\gbour\Documents\ING2-SCIA\Scala Project\target\scala-2.12\classes\example\HttpRequest$.class, C:\Users\gbour\Documents\ING2-SCIA\Scala Project\target\scala-2.12\classes\example\Main$delayedInit$body.class, C:\Users\gbour\Documents\ING2-SCIA\Scala Project\target\scala-2.12\classes\example\HttpRequest.class, C:\Users\gbour\Documents\ING2-SCIA\Scala Project\target\scala-2.12\classes\example\Main.class)
+[debug] External API changes: API Changes: Set()
+[debug] Modified binary dependencies: Set()
+[debug] Initial directly invalidated classes: Set(example.HttpRequest)
+[debug] 
+[debug] Sources indirectly invalidated by:
+[debug] 	product: Set(C:\Users\gbour\Documents\ING2-SCIA\Scala Project\src\main\scala\example\Main.scala, C:\Users\gbour\Documents\ING2-SCIA\Scala Project\src\main\scala\example\HttpRequest.scala)
+[debug] 	binary dep: Set()
+[debug] 	external source: Set()
+[debug] All initially invalidated classes: Set(example.HttpRequest)
+[debug] All initially invalidated sources:Set(C:\Users\gbour\Documents\ING2-SCIA\Scala Project\src\main\scala\example\HttpRequest.scala, C:\Users\gbour\Documents\ING2-SCIA\Scala Project\src\main\scala\example\Main.scala)
+[info] Compiling 2 Scala sources to C:\Users\gbour\Documents\ING2-SCIA\Scala Project\target\scala-2.12\classes ...
+[debug] Getting org.scala-sbt:compiler-bridge_2.12:1.2.5:compile for Scala 2.12.8
+[debug] Getting org.scala-sbt:compiler-bridge_2.12:1.2.5:compile for Scala 2.12.8
+[debug] [zinc] Running cached compiler 2031071c for Scala compiler version 2.12.8
+[debug] [zinc] The Scala compiler is invoked with:
+[debug] 	-bootclasspath
+[debug] 	C:\Users\gbour\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.12.8.jar
+[debug] 	-classpath
+[debug] 	C:\Users\gbour\Documents\ING2-SCIA\Scala Project\target\scala-2.12\classes;C:\Users\gbour\.ivy2\cache\org.scalaj\scalaj-http_2.12\jars\scalaj-http_2.12-2.4.1.jar
+[debug] Scala compilation took 0.385879285 s
+[info] Done compiling.
+[debug] New invalidations:
+[debug] 	Set()
+[debug] Initial set of included nodes: Set()
+[debug] Previously invalidated, but (transitively) depend on new invalidations:
+[debug] 	Set()
+[debug] All newly invalidated classes after taking into account (previously) recompiled classes:Set()
