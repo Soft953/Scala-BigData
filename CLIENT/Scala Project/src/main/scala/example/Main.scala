@@ -46,7 +46,7 @@ object Main extends App {
     val res = example.CsvParser.parseCSV(lines)
     res.foreach(x => {
       println(x)
-      HttpRequest.post(x);
+      HttpRequest.get(x);
     })
   }
 
