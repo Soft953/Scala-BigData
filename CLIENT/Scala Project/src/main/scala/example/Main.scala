@@ -6,7 +6,6 @@ import scala.io.Source
 
 object Main extends App {
 
-
   /*
 
     {
@@ -51,24 +50,4 @@ object Main extends App {
   }
 
   getListOfFiles("ressources/").foreach(x => files(x.getAbsolutePath))
-
-
-  //val lines = Source.fromFile("ressources/carData.csv").getLines.toArray
-
-  /*  String CSV to Map
-  val ref = lines
-  val res = example.CsvParser.parseCSV(ref)
-  res.foreach(x => println(x))
-*/
-  /*  String JSON to Map
-  val ref2 = List(("{ name: Sofiene, age: 21, heigth: 183, weigth: 80 }"), ("{ name: Sofiene, age: 21, heigth: 183, weigth: 80 }"))
-  val res2 = example.JsonParser.parseJSON(ref2)
-  println(res2)
-  */
-  /* Map to CSV */
-  //println(example.CsvParser.mapToCSV(res))
-
-  /* Map to JSON */
-
-
 }
