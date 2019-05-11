@@ -19,7 +19,7 @@ object HttpRequest {
     val response : HttpResponse[String] = Http(url).postData(arg.toJSON)
         .header("Content-Type", "application/json")
         .header("Charset", "UTF-8")
-        .option(HttpOptions.readTimeout(10000)).asString
+        .option(HttpOptions.readTimeout(30000)).asString
     return response.body
   }
 }

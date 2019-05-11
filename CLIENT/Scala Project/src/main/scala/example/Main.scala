@@ -32,7 +32,7 @@ object Main extends App {
    */
 
   def handleResponse(response : String) = response match {
-    case response if response contains "Warning" => println(response)
+    case response if response contains "WARNING" => println(response)
     case _ => println(response)
     //val responseJSON = JsonParser.parseJSON(response)
     //println(responseJSON.keys.toList(0).toString == "Type")
