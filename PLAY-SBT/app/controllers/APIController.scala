@@ -59,14 +59,39 @@ class ApiController @Inject()(cc: ControllerComponents)
                               req_report.nextStep)
         
         /* Code */
-
-      
-     
+    
+        val code=0
+        val message=""
+        val content=""
+        if(report.enginTemp > 99.0)
+        {
+            code = 2
+            message = "WARNING: engine temperature too high."
+            content = "take a break."
+        }
+        else if (report.fuel < 10.0)
+        {
+            code = 2
+            message = "WARNING: fuel is low."
+            content = "go to the gaz station."
+        }
+        else if(report.speed > 130.0)
+        {
+            code = 2
+            message = "WARNING: speed too high."
+            content = "slow down."
+        }
+        else
+        {
+            code = 0
+            message = "Everything is ok."
+            content = "continu."
+        }
         /* Code */
 
         
 
-        val res = Response(report.id, report.location, report.nextStep)  
+        val res = Response(code, message, content)  
          Ok(Json.toJson(res))
       }
       else
