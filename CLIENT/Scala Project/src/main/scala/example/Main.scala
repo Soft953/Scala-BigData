@@ -31,6 +31,13 @@ object Main extends App {
 
    */
 
+  def handleResponse(response : String) = response match {
+    case response if response contains "Warning" => println(response)
+    case _ => Nil
+    //val responseJSON = JsonParser.parseJSON(response)
+    //println(responseJSON.keys.toList(0).toString == "Type")
+  }
+
   def getListOfFiles(dir: String):List[File] = {
     val d = new File(dir)
     if (d.exists && d.isDirectory) {
@@ -45,7 +52,7 @@ object Main extends App {
     val res = example.CsvParser.parseCSV(lines)
     res.foreach(x => {
       val response = HttpRequest.get(x)
-      println(response)
+      handleResponse(response)
     })
   }
 
