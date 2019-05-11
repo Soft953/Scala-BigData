@@ -5,7 +5,7 @@ object HttpRequest {
 
   def get(arg : CarData) : String = {
 
-    val url = "http://localhost:8000/gettest";
+    val url = "http://localhost:9000/info";
 
     val response : HttpResponse[String] = Http(url).param("data", arg.toString).asString
     return response.body
@@ -13,10 +13,10 @@ object HttpRequest {
 
   def post(arg: CarData) : String = {
 
-    val url = "http://localhost:8000/posttest";
+    val url = "http://localhost:9000/info";
 
-    println(arg.toString)
-    val response : HttpResponse[String] = Http(url).postData(arg.toString)
+    println(arg.toJSON)
+    val response : HttpResponse[String] = Http(url).postData(arg.toJSON)
         .header("Content-Type", "application/json")
         .header("Charset", "UTF-8")
         .option(HttpOptions.readTimeout(10000)).asString

@@ -33,7 +33,7 @@ object Main extends App {
 
   def handleResponse(response : String) = response match {
     case response if response contains "Warning" => println(response)
-    case _ => Nil
+    case _ => println(response)
     //val responseJSON = JsonParser.parseJSON(response)
     //println(responseJSON.keys.toList(0).toString == "Type")
   }
@@ -51,7 +51,7 @@ object Main extends App {
     val lines = Source.fromFile(path).getLines.toArray
     val res = example.CsvParser.parseCSV(lines)
     res.foreach(x => {
-      val response = HttpRequest.get(x)
+      val response = HttpRequest.post(x)
       handleResponse(response)
     })
   }
