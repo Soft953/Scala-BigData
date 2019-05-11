@@ -1,5 +1,5 @@
 [0m[[0m[0mdebug[0m] [0m[0mCopy resource mappings: [0m
-[0m[[0m[0mdebug[0m] [0m[0m	(/home/dude/project/scala/scala-api/conf/messages,/home/dude/project/scala/scala-api/target/scala-2.12/classes/messages)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	(/home/dude/project/scala/scala-api/conf/routes,/home/dude/project/scala/scala-api/target/scala-2.12/classes/routes)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	(/home/dude/project/scala/scala-api/conf/logback.xml,/home/dude/project/scala/scala-api/target/scala-2.12/classes/logback.xml)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	(/home/dude/project/scala/scala-api/conf/application.conf,/home/dude/project/scala/scala-api/target/scala-2.12/classes/application.conf)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/dude/project/scala/Scala-BigData/PLAY-SBT/conf/messages,/home/dude/project/scala/Scala-BigData/PLAY-SBT/target/scala-2.12/classes/messages)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/dude/project/scala/Scala-BigData/PLAY-SBT/conf/routes,/home/dude/project/scala/Scala-BigData/PLAY-SBT/target/scala-2.12/classes/routes)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/dude/project/scala/Scala-BigData/PLAY-SBT/conf/logback.xml,/home/dude/project/scala/Scala-BigData/PLAY-SBT/target/scala-2.12/classes/logback.xml)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/dude/project/scala/Scala-BigData/PLAY-SBT/conf/application.conf,/home/dude/project/scala/Scala-BigData/PLAY-SBT/target/scala-2.12/classes/application.conf)[0m

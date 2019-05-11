@@ -1,0 +1,31 @@
+[0m[[0m[31merror[0m] [0m[0m/home/dude/project/scala/Scala-BigData/PLAY-SBT/app/controllers/APIController.scala:6:8: not found: object play[0m
+[0m[[0m[31merror[0m] [0m[0mimport play.api.libs.json.Json[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/dude/project/scala/Scala-BigData/PLAY-SBT/app/controllers/APIController.scala:7:8: not found: object repositories[0m
+[0m[[0m[31merror[0m] [0m[0mimport repositories.DataRepository[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/dude/project/scala/Scala-BigData/PLAY-SBT/app/controllers/APIController.scala:13:11: not found: type AbstractController[0m
+[0m[[0m[31merror[0m] [0m[0m  extends AbstractController(cc) {[0m
+[0m[[0m[31merror[0m] [0m[0m          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/dude/project/scala/Scala-BigData/PLAY-SBT/app/controllers/APIController.scala:9:2: trait Singleton is abstract; cannot be instantiated[0m
+[0m[[0m[31merror[0m] [0m[0m@Singleton[0m
+[0m[[0m[31merror[0m] [0m[0m ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/dude/project/scala/Scala-BigData/PLAY-SBT/app/controllers/APIController.scala:10:35: not found: type ControllerComponents[0m
+[0m[[0m[31merror[0m] [0m[0mclass ApiController @Inject()(cc: ControllerComponents,[0m
+[0m[[0m[31merror[0m] [0m[0m                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/dude/project/scala/Scala-BigData/PLAY-SBT/app/controllers/APIController.scala:11:47: not found: type DataRepository[0m
+[0m[[0m[31merror[0m] [0m[0m                              dataRepository: DataRepository // NEW[0m
+[0m[[0m[31merror[0m] [0m[0m                                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/dude/project/scala/Scala-BigData/PLAY-SBT/app/controllers/APIController.scala:10:22: not found: type Inject[0m
+[0m[[0m[31merror[0m] [0m[0mclass ApiController @Inject()(cc: ControllerComponents,[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/dude/project/scala/Scala-BigData/PLAY-SBT/app/controllers/APIController.scala:13:30: no arguments allowed for nullary constructor Object: ()Object[0m
+[0m[[0m[31merror[0m] [0m[0m  extends AbstractController(cc) {[0m
+[0m[[0m[31merror[0m] [0m[0m                             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/dude/project/scala/Scala-BigData/PLAY-SBT/app/controllers/APIController.scala:17:14: not found: value Action[0m
+[0m[[0m[31merror[0m] [0m[0m  def ping = Action { implicit request =>[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/dude/project/scala/Scala-BigData/PLAY-SBT/app/controllers/APIController.scala:18:5: not found: value Ok[0m
+[0m[[0m[31merror[0m] [0m[0m    Ok("Hello, Scala!")[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m10 errors found[0m

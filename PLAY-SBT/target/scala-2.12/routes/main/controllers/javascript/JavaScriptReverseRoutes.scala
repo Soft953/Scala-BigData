@@ -1,49 +1,39 @@
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/home/dude/project/scala/scala-api/conf/routes
-// @DATE:Wed Mar 06 17:46:53 CET 2019
+// @SOURCE:/home/dude/project/scala/Scala-BigData/PLAY-SBT/conf/routes
+// @DATE:Wed May 01 17:19:29 CEST 2019
 
 import play.api.routing.JavaScriptReverseRoute
 
 
 import _root_.controllers.Assets.Asset
 
-// @LINE:7
+// @LINE:3
 package controllers.javascript {
 
-  // @LINE:7
-  class ReverseHomeController(_prefix: => String) {
+  // @LINE:3
+  class ReverseApiController(_prefix: => String) {
 
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:7
-    def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.index",
+    // @LINE:3
+    def ping: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.ApiController.ping",
       """
         function() {
-          return _wA({method:"GET", url:"""" + _prefix + """"})
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "api/ping"})
         }
       """
     )
   
-  }
-
-  // @LINE:10
-  class ReverseAssets(_prefix: => String) {
-
-    def _defaultPrefix: String = {
-      if (_prefix.endsWith("/")) "" else "/"
-    }
-
-  
-    // @LINE:10
-    def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.Assets.versioned",
+    // @LINE:4
+    def POST_info: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.ApiController.POST_info",
       """
-        function(file1) {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "assets/" + (""" + implicitly[play.api.mvc.PathBindable[Asset]].javascriptUnbind + """)("file", file1)})
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "info"})
         }
       """
     )

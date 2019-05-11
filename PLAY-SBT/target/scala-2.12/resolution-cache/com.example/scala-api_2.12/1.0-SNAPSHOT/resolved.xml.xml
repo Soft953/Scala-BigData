@@ -4,7 +4,7 @@
 		module="scala-api_2.12"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20190306174224"
+		publication="20190511155604"
 	>
 		<description>
 		scala-API

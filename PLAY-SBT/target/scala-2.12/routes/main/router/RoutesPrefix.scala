@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/home/dude/project/scala/scala-api/conf/routes
-// @DATE:Wed Mar 06 17:46:53 CET 2019
+// @SOURCE:/home/dude/project/scala/Scala-BigData/PLAY-SBT/conf/routes
+// @DATE:Wed May 01 17:19:29 CEST 2019
 
 
 package router {
