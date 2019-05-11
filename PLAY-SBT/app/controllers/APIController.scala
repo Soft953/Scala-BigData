@@ -2,7 +2,7 @@
 
 // Make sure it's in the 'controllers' package
 package controllers
-package com.gu.sqlite
+//package com.gu.sqlite
 
 import javax.inject.{Inject, Singleton}
 import play.api.mvc._
@@ -12,6 +12,8 @@ import play.api.libs.functional.syntax._
 import play.api.libs.json._
 
 import models._
+
+
 
 @Singleton
 class ApiController @Inject()(cc: ControllerComponents)
@@ -58,21 +60,8 @@ class ApiController @Inject()(cc: ControllerComponents)
         
         /* Code */
 
-        object DataBase extends SQLite("mydb.db") with App {
-
-          def addRow(car_id: Int, location: String, speed: Float, acceleration: Float,
-          fuel: Float, engineTemp: Float, nextStep: String){
-            database("insert into history values('%s', '%s', '%s', '%s', '%s', '%s', '%s')"
-            .format(car_id, location, speed, acceleration, fuel, 
-            engineTemp, nextStep))
-          }
-
-          if(!database.tableNames().contains("history")) {
-            database("create table history(car_id INT NOT NULL, location VARCHAR(50), 
-            speed FLOAT, acceleration FLOAT, fuel FLOAT, engineTemp FLOAT, nextStep VARCHAR(50))")
-          }
-        
-        }
+      
+     
         /* Code */
 
         
