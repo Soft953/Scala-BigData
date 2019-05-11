@@ -13,12 +13,4 @@ object CsvParser {
     val tmp = splitString(value, delimiter)
     tmp.drop(1).map( e => createCarData(e))
   }
-
-  /*
-  def mapToCSV(map : List[Map[String, String]]) = {
-    val ref3 = map.map(x => x.keySet).flatten.distinct.foldLeft("")((acc, kv) => acc + kv + ";")
-    val res3 = map.map(m => m.foldLeft("")((acc, kv) => acc + kv._2 + ";"))
-    ref3 +: res3
-  }
-  */
 }

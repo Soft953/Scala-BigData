@@ -6,7 +6,6 @@ import scala.io.Source
 
 object Main extends App {
 
-
   /*
 
     {
@@ -32,6 +31,13 @@ object Main extends App {
 
    */
 
+  def handleResponse(response : String) = response match {
+    case response if response contains "Warning" => println(response)
+    case _ => Nil
+    //val responseJSON = JsonParser.parseJSON(response)
+    //println(responseJSON.keys.toList(0).toString == "Type")
+  }
+
   def getListOfFiles(dir: String):List[File] = {
     val d = new File(dir)
     if (d.exists && d.isDirectory) {
@@ -45,30 +51,10 @@ object Main extends App {
     val lines = Source.fromFile(path).getLines.toArray
     val res = example.CsvParser.parseCSV(lines)
     res.foreach(x => {
-      println(x)
-      HttpRequest.get(x);
+      val response = HttpRequest.get(x)
+      handleResponse(response)
     })
   }
 
   getListOfFiles("ressources/").foreach(x => files(x.getAbsolutePath))
-
-
-  //val lines = Source.fromFile("ressources/carData.csv").getLines.toArray
-
-  /*  String CSV to Map
-  val ref = lines
-  val res = example.CsvParser.parseCSV(ref)
-  res.foreach(x => println(x))
-*/
-  /*  String JSON to Map
-  val ref2 = List(("{ name: Sofiene, age: 21, heigth: 183, weigth: 80 }"), ("{ name: Sofiene, age: 21, heigth: 183, weigth: 80 }"))
-  val res2 = example.JsonParser.parseJSON(ref2)
-  println(res2)
-  */
-  /* Map to CSV */
-  //println(example.CsvParser.mapToCSV(res))
-
-  /* Map to JSON */
-
-
 }
