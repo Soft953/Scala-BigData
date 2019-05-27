@@ -1,0 +1,5 @@
+id;location;speed;acceleration;fuel;engineTemp;nextStep
+1111;4889;67.8;2.3;99.6;100.0;A1-Paris
+8888;4889;17.8;2.3;60.6;90.0;A1-Paris
+2919;4889;37.8;3.3;79.6;200.0;A1-Paris
+8080;2891;61.8;8.3;99.6;10.0;A1-Paris
