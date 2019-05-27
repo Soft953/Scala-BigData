@@ -1,4 +1,4 @@
-.PHONY: build start clean
+.PHONY: build start start-local clean
 
 build:
 	bash -c "sbt dist"
@@ -7,6 +7,9 @@ build:
 start:
 	bash -c "sudo docker build -t scala-api ."
 	bash -c "sudo docker run -it -p 9000:9000 -p 9443:9443 --rm scala-api"
+
+start-local:
+	bash -c "sbt run"
 
 clean:
 	bash -c "rm -rf svc"
