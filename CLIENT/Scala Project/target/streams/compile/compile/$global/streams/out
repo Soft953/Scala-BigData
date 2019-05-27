@@ -1,5 +1,0 @@
-[error] C:\Users\gbour\Documents\ING2-SCIA\Scala Project\src\main\scala\example\HttpRequest.scala:10:20: not enough arguments for method param: (key: String, value: String)scalaj.http.HttpRequest.
-[error] Unspecified value parameter value.
-[error]     Http(url).param(arg.toString()).asString
-[error]                    ^
-[error] one error found

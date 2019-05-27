@@ -1,4 +1,0 @@
-
-
-GET /api/ping controllers.ApiController.ping
-GET /info controllers.ApiController.POST_info
