@@ -6,7 +6,7 @@ build:
 
 start:
 	bash -c "sudo docker build -t scala-api ."
-	bash -c "sudo docker run -it -p 9000:9000 -p 9443:9443 --rm scala-api"
+	bash -c "sudo docker run -it -p 9000:9000 -p 9443:9443 --network=host --rm scala-api"
 
 start-local:
 	bash -c "sbt run"

@@ -13,8 +13,6 @@ import play.api.libs.json._
 
 import models._
 
-
-
 @Singleton
 class ApiController @Inject()(cc: ControllerComponents)
 extends AbstractController(cc) {
@@ -57,6 +55,9 @@ extends AbstractController(cc) {
                 req_report.fuel, 
                 req_report.engineTemp,
                 req_report.nextStep)
+
+            val car = new CarData(report.id.toString, report.location.toString, report.speed.toFloat, report.acceleration.toFloat, report.fuel.toFloat, report.engineTemp.toFloat, report.nextStep.toString)
+            CarProducer.sendToKafka("raw_carData", "localhost:9092", Array(car.toString()))
 
             /* Code */
 
