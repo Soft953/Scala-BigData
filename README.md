@@ -1,10 +1,33 @@
 # Scala-BigData
 
+S'assurer d'avoir une base de données Cassandra en background.
+
+""" CLIENT """ 
+      |
+      V
+""" BACKEND """
+      |
+      V
+""" KAFKA """       """" Spark RDD Data Analyse """
+      |                         ^
+      V                         |
+""" Consumer """ --> """ Cassandra Database """
+
 Pour lancer le serveur, exécuter la commande suivante à l'intérieur du dossier 'PLAY-SBT':
-    # sbt run
+    # make clean
+    # make build
+    # make start
 
 Pour lancer le client, exécuter la commande suivante à l'intérieur du dossier 'CLIENT/Scala Project':
     # sbt run
+    
+Pour lancer le CarConsumer Kafka, exécuter la commande suivante à l'intérieur du dossier 'SPARK-KAFKA/':
+    # sbt run
+    # Choose CarConsumer Main
+    
+Pour lancer Spark et avoir des analyses sur la base de données, exécuter la commande suivante à l'intérieur du dossier 'SPARK-KAFKA/':
+    # sbt run
+    # Choose Main
 
 Les différentes routes disponible sont:
     GET localhost:9000/api/ping -> permet de tester si le serveur est lancé
