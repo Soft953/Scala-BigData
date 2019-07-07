@@ -1,32 +1,21 @@
 package spark
-/*
 
-import org.apache.spark.SparkConf
-import org.apache.spark.sql.{DataFrame, SparkSession}
-import org.apache.spark.sql.functions._
+import org.apache.spark._
+import org.apache.spark.SparkContext._
+// Implicits that add functions to the SparkContext & RDDs.
+import com.datastax.spark.connector._
 
 object Main extends App {
-  //getListOfFiles("ressources/").foreach(x => files(x.getAbsolutePath))
 
-  val pathToFile = "carData.csv"
+  val sparkMaster = "local[*]"
+  val cassandraHost = "localhost"
+  val conf = new SparkConf(true)
+    .set("spark.cassandra.connection.host", cassandraHost)
+    val sc = new SparkContext(sparkMaster, "BasicQueryCassandra", conf)
+    // entire table as an RDD
+    // assumes your table test was created as CREATE TABLE test.kv(key text PRIMARY KEY, value int);
+    val data = sc.cassandraTable("isd_car_data", "raw_car_data")
 
-  // create spark configuration and spark context: the Spark context is the entry point in Spark.
-  // It represents the connexion to Spark and it is the place where you can configure the common properties
-  // like the app name, the master url, memories allocation...
-  val ss = SparkSession.builder()
-      .appName("WordcountDF")
-      .master("local[*]")
-      .getOrCreate()
-
-
-  def loadData(): DataFrame = {
-      ss.read.format("csv").option("header", "true").option("delimiter", ";").load(pathToFile)
-  }
-  
-  println("DATA ->")
-  val data = loadData()
-  data.show()
-  ss.stop()
-
-
-}*/
+    //val df = spark.read.format("org.apache.spark.sql.cassandra").options(Map( "table" -> "raw_car_data", "keyspace" -> "ids_car_data")).load() // This Dataset will use a spark.cassandra.input.size of 128
+    data.foreach(car => System.out.println(car))
+}
