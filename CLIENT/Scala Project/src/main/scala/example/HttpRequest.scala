@@ -13,7 +13,7 @@ object HttpRequest {
 
   def post(arg: CarData) : String = {
 
-    val url = "http://localhost:9000/info";
+    val url = "http://localhost:9443/info";
 
     println(arg.toJSON)
     val response : HttpResponse[String] = Http(url).postData(arg.toJSON)
