@@ -33,7 +33,7 @@ object Main extends App {
     }
   }
 
-  def loadData() : RDD[CarData] = {
+  def loadData() : (SparkContext, RDD[CarData]) = {
     val sparkMaster = "local[*]"
     val cassandraHost = "localhost"
     val conf = new SparkConf(true)
@@ -43,7 +43,7 @@ object Main extends App {
       // entire table as an RDD
       // assumes your table test was created as CREATE TABLE test.kv(key text PRIMARY KEY, value int);
       val data = sc.cassandraTable[CarData]("isd_car_data", "raw_car_data")
-      data
+      (sc, data)
   }
 
   def dataToString(data : RDD[CarData]) = {
@@ -57,8 +57,14 @@ object Main extends App {
   def slowestCarWithEngineAlert(data : RDD[CarData]) = {
     slowestCar(data).filter(x => x.enginetemp > 99.0)
   }
+  
+  def carWithSpeedAlert(data : RDD[CarData]) = {
+    data.filter(x => x.speed > 130.0)
+  }
 
-  val data = loadData()
+  val tmp = loadData()
+  val sc = tmp._1
+  val data = tmp._2
   System.out.println("Full DataBase : ")
   System.out.println(dataToString(data))
 
@@ -67,4 +73,10 @@ object Main extends App {
 
   System.out.println("Slowest Car with engine alert: ")
   slowestCarWithEngineAlert(data).foreach(x => System.out.println(x))
+  
+  System.out.println("Car with speed alert: ")
+  carWithSpeedAlert(data).foreach(x => System.out.println(x))
+
+  System.out.println("Done")
+  sc.stop
 }
