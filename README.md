@@ -2,16 +2,16 @@
 
 S'assurer d'avoir une base de données Cassandra en background.
 
-""" CLIENT """ 
+    CLIENT
       |
       V
-""" BACKEND """
+    BACKEND
       |
       V
-""" KAFKA """       """" Spark RDD Data Analyse """
-      |                         ^
-      V                         |
-""" Consumer """ --> """ Cassandra Database """
+    KAFKA        Spark RDD Data Analyse
+      |                   ^
+      V                   |
+    Consumer --> Cassandra Database
 
 Pour lancer le serveur, exécuter la commande suivante à l'intérieur du dossier 'PLAY-SBT':
     # make clean
