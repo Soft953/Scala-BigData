@@ -14,22 +14,27 @@ S'assurer d'avoir une base de données Cassandra en background.
     Consumer --> Cassandra Database
 
 Pour lancer le serveur, exécuter la commande suivante à l'intérieur du dossier 'PLAY-SBT':
-    # make clean
-    # make build
-    # make start
+
+    - make clean
+    - make build
+    - make start
 
 Pour lancer le client, exécuter la commande suivante à l'intérieur du dossier 'CLIENT/Scala Project':
-    # sbt run
+
+    - sbt run
     
 Pour lancer le CarConsumer Kafka, exécuter la commande suivante à l'intérieur du dossier 'SPARK-KAFKA/':
-    # sbt run
-    # Choose CarConsumer Main
+
+    - sbt run
+    - Choose CarConsumer Main
     
 Pour lancer Spark et avoir des analyses sur la base de données, exécuter la commande suivante à l'intérieur du dossier 'SPARK-KAFKA/':
-    # sbt run
-    # Choose Main
+
+    - sbt run
+    - Choose Main
 
 Les différentes routes disponible sont:
+    
     GET localhost:9000/api/ping -> permet de tester si le serveur est lancé
 
     POST localhost:9000/info -> permet à une voiture de savoir quelle est la prochaine action à effectuer.
